@@ -1,7 +1,10 @@
 
 These are the step by step results of the scripts included in the run_analysis.R file:
 
-**1. Download the dataset**  
+**0. Loading the library**  
+`library(dplyr)`  
+
+**1. Downloading the dataset**  
 `filename <- "dataset.zip"`     
 `if (!file.exists(filename)){`     
        `fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"`
@@ -55,7 +58,7 @@ These are the step by step results of the scripts included in the run_analysis.R
 
 **6. Appropriately labels the data set with descriptive variable names.**  
      `names(neat_Data)[2] = "Activity"`  
-	    	The second column title is changed to Activity
+	    	The second column title is changed to Activity  
      `names(neat_Data)<-gsub("Acc", "Accelerometer", names(neat_Data))`  
 	    	The Acc word is replaced with Accelerometer in all of the column titles  
      `names(neat_Data)<-gsub("Gyro", "Gyroscope", names(neat_Data))`  
