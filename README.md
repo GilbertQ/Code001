@@ -8,8 +8,8 @@ These are the step by step results of the scripts included in the run_analysis.R
  `download.file(fileURL,filename)`      
      `}`  
      The dataset is downloaded from the provided link and saved in the dataset.zip file.  
-    `if (!dir.exists("UCI HAR Dataset")){` 
-     `unzip(filename)`  
+    `if (!dir.exists("UCI HAR Dataset")){`  
+    `unzip(filename)`  
      `}`  
      This file is unzipped into the folder UCI HAR Dataset  
      If the file or the folder already exists they are not created.  
@@ -35,7 +35,7 @@ These are the step by step results of the scripts included in the run_analysis.R
        
  
 
-**3. Merges the training and the test sets to create one data set.**
+**3. Merges the training and the test sets to create one data set.**  
      `x <- rbind(x_train, x_test)`  
     	Both data from x train and test parts are merged into a new variable (10299 obs. of 561 variables)  
      `y <- rbind(y_train, y_test)`  
